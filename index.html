@@ -18,19 +18,18 @@
     <script src="https://js.arcgis.com/4.22/"></script>
     <script>
       require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/widgets/Search'], function (esriConfig, Map, MapView, Search) {
-        esriConfig.apiKey = 'AAPK500e9aa6b51b424099dea44ee64828b18uB4n733TCj83I3F7GV1leHEcctlYHv72Q_96j7G9tgYhKa_RCnXdIChGKWwlI_z';
+        esriConfig.apiKey = 'API_KEY_HERE';
 
         const map = new Map({
-          basemap: 'arcgis-topographic' // Basemap layer service
+          basemap: 'arcgis-topographic'
         });
         const view = new MapView({
           map: map,
-          center: [55.2, 25.2], // Longitude, latitude
-          zoom: 13, // Zoom level
-          container: 'viewDiv' // Div element
+          center: [55.2, 25.2],
+          zoom: 13,
+          container: 'viewDiv'
         });
         const search = new Search({
-          //Add Search widget
           view: view
         });
         view.ui.add(search, 'top-right');
